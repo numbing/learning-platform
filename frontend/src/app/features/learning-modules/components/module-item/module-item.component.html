@@ -1,0 +1,35 @@
+<div class="card mb-3" [class.completed]="module.completed">
+  <div class="card-body">
+    <div class="row align-items-center">
+      <div class="col-auto">
+        <input
+          type="checkbox"
+          class="form-check-input custom-checkbox"
+          [checked]="module.completed"
+          [id]="'module-' + module.id"
+          (change)="onCheckboxChange($event)"
+          />
+      </div>
+      <div class="col">
+        <label [for]="'module-' + module.id" class="module-title">
+          {{ module.title }}
+        </label>
+        <div class="mt-1">
+          <span class="badge me-2" [ngClass]="getCategoryBadgeClass()">
+            {{ module.category }}
+          </span>
+          <span class="text-muted small">
+            <i class="bi bi-clock"></i> {{ getFormattedDuration() }}
+          </span>
+        </div>
+      </div>
+      <div class="col-auto">
+        @if (module.completed) {
+          <span class="badge bg-success">
+            ✓ Completed
+          </span>
+        }
+      </div>
+    </div>
+  </div>
+</div>

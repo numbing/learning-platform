@@ -1,0 +1,51 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <h1 class="display-4 text-center mb-4">Learning Platform</h1>
+      <p class="lead text-center text-muted mb-5">
+        Track your progress across AI, Sustainability, and Digital Skills modules
+      </p>
+
+      @if (error()) {
+        <app-error-alert
+          [message]="error()!"
+          (dismiss)="onErrorDismiss()"
+        ></app-error-alert>
+      }
+
+      <div class="sticky-top bg-white" style="top: 0; z-index: 1020;">
+        <app-progress-summary [progress]="progress()"></app-progress-summary>
+      </div>
+
+      <app-category-filter
+        (categoryChange)="onCategoryChange($event)"
+      ></app-category-filter>
+
+      @if (loading()) {
+        <app-loading-spinner
+          [message]="'Loading modules...'"
+        ></app-loading-spinner>
+      }
+
+      @if (!loading()) {
+        <div>
+          @if (modules().length === 0) {
+            <div class="alert alert-info text-center">
+              <p class="mb-0">No modules found. Try a different category or check back later.</p>
+            </div>
+          }
+          @if (modules().length > 0) {
+            <div>
+              @for (module of modules(); track module) {
+                <app-module-item
+                  [module]="module"
+                  (completionToggle)="onCompletionToggle($event)"
+                ></app-module-item>
+              }
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="card mb-4 border-primary">
+  <div class="card-body">
+    <h5 class="card-title">Learning Progress</h5>
+    <div class="progress mb-3" style="height: 25px;">
+      <div
+        class="progress-bar"
+        [ngClass]="getProgressBarClass()"
+        role="progressbar"
+        [style.width.%]="progress.completionPercentage"
+        [attr.aria-valuenow]="progress.completionPercentage"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        {{ progress.completionPercentage }}%
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-4">
+        <div class="stat-label">Total</div>
+        <div class="stat-value">{{ progress.totalModules }}</div>
+      </div>
+      <div class="col-4">
+        <div class="stat-label">Completed</div>
+        <div class="stat-value text-success">{{ progress.completedModules }}</div>
+      </div>
+      <div class="col-4">
+        <div class="stat-label">Remaining</div>
+        <div class="stat-value text-primary">
+          {{ progress.totalModules - progress.completedModules }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="mb-4">
+  <label for="categorySelect" class="form-label fw-bold">Filter by Category</label>
+  <select
+    id="categorySelect"
+    class="form-select"
+    [value]="getCategoryValue(selectedCategory)"
+    (change)="onCategoryChange($event)"
+    >
+    @for (category of categories; track category) {
+      <option [value]="getCategoryValue(category)">
+        {{ getCategoryLabel(category) }}
+      </option>
+    }
+  </select>
+</div>

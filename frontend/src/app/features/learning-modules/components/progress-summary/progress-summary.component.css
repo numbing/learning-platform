@@ -1,0 +1,20 @@
+.stat-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0.25rem;
+}
+
+.progress {
+  border-radius: 0.5rem;
+}
+
+.progress-bar {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
