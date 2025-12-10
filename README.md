@@ -120,3 +120,33 @@ sudo systemctl start mongod            # Linux
 rm -rf node_modules backend/node_modules frontend/node_modules
 npm run install:all
 ```
+
+---
+
+## Future Improvements
+
+### Planned Enhancements
+
+**Backend:**
+- **GraphQL API** - Migrate from REST to GraphQL for more flexible data querying (I have experience with GraphQL in Next.js, interested in implementing it with NestJS)
+- **Authentication & Authorization** - Add JWT-based user authentication with role-based access control
+- **Advanced Filtering** - Add pagination, sorting, and search capabilities
+- **API Documentation** - Add Swagger/OpenAPI documentation
+
+**Frontend:**
+
+- **Advanced Analytics** - Visualize learning progress with charts (e.g., Chart.js, D3.js)
+- **Dark Mode** - Add theme switching capability
+- **Accessibility** - Improve ARIA labels and keyboard navigation
+
+**DevOps:**
+- **CI/CD Pipeline** - Automate testing and deployment with GitHub Actions
+- **Docker Deployment** - Containerize the application for easier deployment
+- **Monitoring** - Add logging and error tracking (e.g., Sentry)
+- **Performance Monitoring** - Track Core Web Vitals and API response times
+
+---
+
+## License
+
+MIT - Use freely for learning or as a starting point for your projects.
