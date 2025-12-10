@@ -61,7 +61,7 @@ Press `Ctrl+C` to stop.
 ## Tech Stack
 
 **Backend:**
-- NestJS 10 + TypeScript
+- NestJS 11 + TypeScript
 - MongoDB + Mongoose
 - REST API
 - Jest testing
