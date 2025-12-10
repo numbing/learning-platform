@@ -147,6 +147,24 @@ npm run install:all
 
 ---
 
+## Assumptions & Trade-offs
+
+**Assumptions:**
+- Single-user system (no authentication or multi-user support)
+- Small dataset (less than 100 modules, no pagination needed)
+- Local development environment (localhost only)
+- Modules have binary completion status (completed or not, no partial progress)
+
+**Trade-offs:**
+- **REST API over GraphQL** - Simpler CRUD implementation vs flexible querying (interested in GraphQL migration, have Next.js experience), i never worked with nestjs and graphql, i worked with nextjs but take a bit of time also learn it with nestjs
+- **Signals over NgRx** - Built-in simplicity vs advanced state management
+- **Bootstrap over Custom CSS** - Development speed vs unique design
+- **Optimistic UI updates** - Better UX vs more complex rollback logic
+- **Backend tests only** - Focused coverage vs comprehensive test suite
+- **Monorepo structure** - Simpler management vs team scalability
+
+---
+
 ## License
 
 MIT - Use freely for learning or as a starting point for your projects.
